@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daria Locher - Data Researcher & Advocacy Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        .header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+
+        .header .subtitle {
+            font-size: 1.25rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .header .description {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 32rem;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .header-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .icon {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            /* border-bottom: 1px solid #e5e7eb; */
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            min-height: 10px;
+            max-height: 80px;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            /* margin: 0 auto; */
+            /* padding: 0 1.5rem; */
+        }
+
+        .nav-list {
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .dropdown-toggle {
+            /* display: flex; */
+            /* align-items: center; */
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .dropdown-toggle:hover {
+            color: #3b82f6;
+        }
+
+        .dropdown-arrow {
+            margin-left: 0.5rem;
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-item:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: flex;
+            top: 100%;
+            left: 0;
+            background-color: #fffffff1;
+            min-width: 200px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+            border-radius: 0.375rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f9fafb;
+            color: #3b82f6;
+        }
+
+        /* .portfolio-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .portfolio-btn:hover {
+            background: #eff6ff;
+        } */
+
+        /* Main Content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-links {
+            background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+        }
+
+        .quick-links h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: white;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .link-btn:hover {
+            background: #f9fafb;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 1rem;
+        }
+
+        .experience-header {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .experience-header:hover {
+            background: #f9fafb;
+        }
+
+        .experience-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: between;
+            width: 100%;
+        }
+
+        .experience-info {
+            flex: 1;
+        }
+
+        .experience-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .expand-icon {
+            margin-left: 1rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #9ca3af;
+            transition: transform 0.3s;
+        }
+
+        .experience-item.expanded .expand-icon {
+            transform: rotate(90deg);
+        }
+
+        .experience-description {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .experience-item.expanded .experience-description {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .experience-list {
+            list-style: none;
+        }
+
+        .experience-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #374151;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .bullet {
+            width: 0.375rem;
+            height: 0.375rem;
+            background: #2563eb;
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Publications Section */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .publication-item {
+            border-left: 4px solid #2563eb;
+            padding: 1.5rem;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-venue {
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .publication-date {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .education-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-school {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        .education-badge {
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #bbf7d0;
+        }
+
+        .education-details {
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .education-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer .description {
+            color: #d1d5db;
+            max-width: 32rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            color: white;
+            border: 1px solid #4b5563;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .footer-btn:hover {
+            background: #1f2937;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-list {
+                gap: 1rem;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                background-color: #f9fafb;
+                margin-top: 0;
+            }
+
+            .experience-header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        /* .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        } */
+
+        /* @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Daria Locher</h1>
+            <p class="subtitle">Data Researcher & Advocacy Specialist</p>
+            <p class="description">
+                Self-motivated researcher with a passion for quantitative social science and data-driven advocacy
+            </p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-content">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/" class="dropdown-toggle">
+                        Resume
+                        <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                        <div class="dropdown-menu">
+                            <a href="/#experience" class="dropdown-item">Experience</a>
+                            <a href="/#skills" class="dropdown-item">Skills</a>
+                            <a href="/#publications" class="dropdown-item">Publications</a>
+                            <a href="/#education" class="dropdown-item">Education</a>
+                        </div>
+                    </li>
+                <li class="nav-item">
+                    <a href="#" class="dropdown-toggle">
+                        Portfolio and Research
+                        <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                        <div class="dropdown-menu">
+                            <a href="/portfolio" class="dropdown-item">Data Portfolio</a>
+                            <a href="/research" class="dropdown-item">Independent Research</a>
+                        </div>
+                    </li>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="publications" class="section">
+            <h2 class="section-title">Zika, a "disease of the poor"?</h2>
+            <p>
+                Please find this research study stylized in a print report format at this link here.
+                https://29cdad88-a9f7-4078-aa70-d7e6f9c4fe6e.usrfiles.com/ugd/29cdad_fb69668bd1084d08b06d6531cd89670f.pdf
+            </p>
+            <p>
+                Research summary
+                This project maps confirmed instances of the Zika virus in 2016 in countries in South and Central America alongside several factors to determine which has the highest correlation. 
+                The Zika virus is a mosquito-borne disease that can cause neurological effects including Guillain-Barré syndrome, as well as serious birth defects in pregnant women, including microcephaly. The first cases were identified in Africa in the 1940s, but there was an extreme outbreak across the globe in 2016, leading the World Health Organization to declare a Public Health Emergency of International Concern (PHEIC) for Zika-related microcephaly and neurological disorders. Background research indicates that poverty and inequality had large effects on which populations were affected by the virus. A July 2016 article by the United Nations Population Fund points to Brazil as an example of where the virus hit hardest, and identifies marginalization, poverty, and poor healthcare systems as important factors. Meanwhile, mosquito populations are found across the world, and converge around wet areas, including rainforests. 
+            </p>
+            <p>
+                The aim of this research was to answer the questions: 
+                Is there a notable correlation between occurrences of the disease across countries with the country's per capita GDP?
+                Do other factors have a larger impact on Zika cases, for example amount of forest area within the country?
+            </p>
+            <p>
+                In an attempt to answer these questions, this study looks at reported Zika cases across Central and South America in 2016 in the first seven months of the WHO's Public Health Emergency. This research shows that Brazil, while singled out as a location with a especially large epidemic, was not the location in this region with the worst outbreak — rather, other, smaller countries had case loads that affected significantly larger portions of their populations. Additionally, this research reveals a much stronger correlation between Zika cases and forest coverage within countries than the cases with countries' income levels.
+            </p>
+            <p>
+                Context for this study 
+            </p>
+            <p>
+                This data used in this report was initially collected for a university class project in the course “GIS in Area Studies” at Washington University in St. Louis, but this report was written in 2024 as an exercise of how to represent GIS data better using the design and analysis expertise I developed as a human rights researcher and graphic designer after college.
+                The data for the 2016 reported cases of Zika in Central and South America were sourced from the Humanitarian Data Exchange, which covers the reporting period from February 12, 2016 until September 15, 2016. I cleaned non-confirmed cases from the dataset to have more standardization between countries' data. The 2016 GDP per capita of the countries came from the United Nations' National Accounts Main Aggregates database and World Bank Group national accounts data. Data for the French overseas regions came from Statistica, and data for Saint Barthelemy from the Institut d'Émission des Départements d'Outre-Mer. Please note that the GDP data for Saint Martin was only available from 2014; and for Saint Barthelemy from 2010, while the rest of the data is sourced from the more-relevant year 2016. In all charts unless otherwise indicated, the French overseas regions of Martinique, Guadeloupe, and French Guinea are merged due to data issues. 
+            </p>
+            <p>
+                Analysis
+                First, I mapped total confirmed cases of the disease by the country level, and immediately realized that looking at Zika cases purely by country-level totals is not useful, because high-population countries are overrepresented. In this first map, Brazil has by far the highest total confirmed cases, which tracks with the country having the largest population of these countries — double any other country, with Mexico (half the population) and Colombia (a quarter of the population) being the next highest-populated countries in the region. 
+            </p>
+            <p>
+                Countries with the highest occurrences of Zika cases in the region:
+                Brazil: 887,431
+                Colombia: 154,510
+                Puerto Rico: 95,756
+                Nicaragua: 12,908
+                Bolivia: 1,438
+            </p>
+            </div>
+        </section>
+
+    </main>
+
+
+
+</body>
+</html>
