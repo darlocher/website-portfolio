@@ -12,278 +12,280 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #1c1b22;
-            background: #ffffff;
+            color: #1f2937;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
             min-height: 100vh;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1.5 rem;
-        }
-
-        /* Header */
-        header {
-            background: #c3cfd1;
-            color: black;
-            padding: 2.5rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.05);
-            pointer-events: none;
+        /* Header Styles */
+        .header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .header-content {
-            position: relative;
-            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
             text-align: center;
         }
 
-        .header-content h1 {
-            font-size: 2.75rem;
-            margin-bottom: 0.5rem;
+        .header h1 {
+            font-size: 3rem;
             font-weight: 700;
-        }
-
-        .header-content .subtitle {
-            font-size: 1.3rem;
+            color: #111827;
             margin-bottom: 1rem;
-            opacity: 0.9;
+            letter-spacing: -0.025em;
         }
 
-        .header-content .description {
-            font-size: 1rem;
-            max-width: 500px;
-            margin: 0 auto;
-            opacity: 0.8;
+        .header .subtitle {
+            font-size: 1.25rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .header .description {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 32rem;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .header-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .icon {
+            width: 1rem;
+            height: 1rem;
         }
 
         /* Navigation */
-        nav {
-            background: #fff;
-            box-shadow: 0 1px 10px #1c1b22;
+        .nav {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 50;
         }
 
-        nav ul {
-            list-style: none;
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .nav-list {
             display: flex;
+            align-items: center;
             justify-content: center;
-            padding: 1rem 0;
             gap: 2rem;
+            padding: 1rem 0;
+            list-style: none;
+            flex-wrap: wrap;
         }
 
-        nav ul li a {
+        .nav-link {
             text-decoration: none;
-            color: #4a292f;
-            font-weight: 600;
-            font-size: .9rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: color 0.3s ease;
+            color: #374151;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
         }
 
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: #dbeafe;
+        .nav-link:hover {
             color: #2563eb;
+            background: #eff6ff;
         }
 
         .portfolio-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            padding: 0.5rem 1rem;
             background: white;
             color: #2563eb;
-            border: 1px solid #dbeafe;
-            padding: 0.5rem 1rem;
+            border: 1px solid #bfdbfe;
             border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
+            transition: all 0.2s;
         }
 
         .portfolio-btn:hover {
-            background: #dbeafe;
+            background: #eff6ff;
         }
 
-        .portfolio-btn::before {
-            content: "↗";
-            width: 1rem;
-            height: 1rem;
+        /* Main Content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 2rem;
         }
 
         /* About Section */
-        .about-content {
+        .about-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 2rem;
             align-items: start;
         }
 
+        .about-text {
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.7;
+        }
+
         .about-text p {
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            color: #1c1b22;
-            line-height: 1.6;
-        }
-
-        .contact-info {
-            background: #c3cfd1;
-            color: black;
-            padding: 1.1rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        .contact-info h3 {
-            margin-bottom: 1rem;
-            color: #8a2b3c;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.75rem;
-            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
         }
 
         .quick-links {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
         }
 
-        .quick-link-btn {
+        .quick-links h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .link-btn {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             width: 100%;
+            padding: 0.75rem 1rem;
             background: white;
             color: #374151;
             border: 1px solid #d1d5db;
-            padding: 0.75rem 1rem;
             border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
+            margin-bottom: 0.75rem;
+            transition: all 0.2s;
         }
 
-        .quick-link-btn:hover {
+        .link-btn:hover {
             background: #f9fafb;
-        }
-
-        .quick-link-btn::before {
-            content: "↗";
-            width: 1rem;
-            height: 1rem;
         }
 
         /* Experience Section */
         .experience-item {
-            background: white;
             margin-bottom: 1rem;
-            border: 0;
-            border-radius: 0.75rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.2s ease;
         }
 
-        .experience-item:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        .job-header {
+        .experience-header {
+            width: 100%;
             padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            border-bottom: none;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s;
         }
 
-        .job-header:hover {
+        .experience-header:hover {
             background: #f9fafb;
         }
 
-        .job-info {
+        .experience-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: between;
+            width: 100%;
+        }
+
+        .experience-info {
             flex: 1;
         }
 
-        .job-title {
+        .experience-title {
             font-size: 1.125rem;
             font-weight: 600;
             color: #111827;
             margin-bottom: 0.5rem;
         }
 
-        .job-company {
-            font-size: 1rem;
+        .experience-company {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             color: #2563eb;
             font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-        }
-
-        .job-company::before {
-            content: "🏢";
-            font-size: 0.875rem;
-        }
-
-        .job-meta {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .job-date {
-            font-size: 0.875rem;
             color: #6b7280;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-        }
-
-        .job-date::before {
-            content: "📅";
             font-size: 0.875rem;
         }
 
         .expand-icon {
-            font-size: 1.25rem;
+            margin-left: 1rem;
+            width: 1.25rem;
+            height: 1.25rem;
             color: #9ca3af;
-            transition: transform 0.2s ease;
-            font-weight: bold;
+            transition: transform 0.3s;
         }
 
         .experience-item.expanded .expand-icon {
             transform: rotate(90deg);
         }
 
-        .job-description {
-            padding: 0 1.5rem;
+        .experience-description {
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
@@ -291,34 +293,32 @@
             border-top: 1px solid #e5e7eb;
         }
 
-        .experience-item.expanded .job-description {
+        .experience-item.expanded .experience-description {
             max-height: 500px;
-            padding: 1rem 1.5rem 1.5rem;
+            padding: 1.5rem;
         }
 
-        .job-description ul {
+        .experience-list {
             list-style: none;
-            padding-left: 0;
         }
 
-        .job-description li {
-            margin-bottom: 0.5rem;
-            padding-left: 1rem;
-            position: relative;
-            font-size: 0.875rem;
+        .experience-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
             color: #374151;
-            line-height: 1.625;
+            font-size: 0.875rem;
+            line-height: 1.6;
         }
 
-        .job-description li:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0.5rem;
+        .bullet {
             width: 0.375rem;
             height: 0.375rem;
-            background: #3b82f6;
+            background: #2563eb;
             border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
         }
 
         /* Skills Section */
@@ -328,19 +328,11 @@
             gap: 1.5rem;
         }
 
-        .skill-category {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border: 0;
-        }
-
         .skill-category h3 {
-            color: #111827;
-            margin-bottom: 1rem;
             font-size: 1.125rem;
             font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
         }
 
         .skill-tags {
@@ -354,45 +346,32 @@
             color: #1e40af;
             padding: 0.25rem 0.75rem;
             border-radius: 1rem;
-            font-size: 0.8rem;
+            font-size: 0.875rem;
             font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            background: #bfdbfe;
         }
 
         /* Publications Section */
         .publications-list {
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .publication-item {
-            background: white;
+            border-left: 4px solid #2563eb;
             padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 0.75rem;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 0;
-            border-left: 4px solid #3b82f6;
         }
 
         .publication-title {
             font-weight: 600;
             color: #111827;
             margin-bottom: 0.5rem;
-            font-size: 0.95rem;
         }
 
         .publication-venue {
             color: #2563eb;
-            font-style: italic;
-            margin-bottom: 0.25rem;
-            font-size: 1rem;
             font-weight: 500;
+            margin-bottom: 0.25rem;
         }
 
         .publication-date {
@@ -400,105 +379,126 @@
             font-size: 0.875rem;
         }
 
+        /* Education Section */
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .education-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-school {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        .education-badge {
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #bbf7d0;
+        }
+
+        .education-details {
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .education-details p {
+            margin-bottom: 0.5rem;
+        }
+
         /* Footer */
-        footer {
+        .footer {
             background: #111827;
             color: white;
+            padding: 3rem 1.5rem;
             text-align: center;
-            padding: 3rem 0;
         }
 
-        footer p {
-            margin-bottom: 0.5rem;
-            font-size: 1.125rem;
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        footer p:nth-child(2) {
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer .description {
             color: #d1d5db;
             max-width: 32rem;
-            margin: 1rem auto;
-            font-size: 1rem;
+            margin: 0 auto 1.5rem;
         }
 
-        .social-links {
-            margin-top: 1rem;
+        .footer-links {
             display: flex;
+            align-items: center;
             justify-content: center;
             gap: 1.5rem;
         }
 
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.2s ease;
-            font-weight: 500;
-            background: transparent;
-            border: 1px solid #4b5563;
+        .footer-btn {
             padding: 0.5rem 1rem;
+            background: transparent;
+            color: white;
+            border: 1px solid #4b5563;
             border-radius: 0.5rem;
-            transition: all 0.2s ease;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
         }
 
-        .social-links a:hover {
-            background: #374151;
-            border-color: #6b7280;
+        .footer-btn:hover {
+            background: #1f2937;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2.25rem;
+            .header h1 {
+                font-size: 2rem;
             }
 
-            .contact-header {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            .about-content {
+            .about-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
             }
 
-            .job-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.75rem;
+            .nav-list {
+                gap: 1rem;
             }
 
-            .job-meta {
-                width: 100%;
-                justify-content: space-between;
-            }
-
-            .education-header {
+            .experience-header-content {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                padding: 1rem;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
 
-            .container {
-                padding: 0 1rem;
+            .education-header {
+                flex-direction: column;
+                gap: 0.5rem;
             }
 
-            section {
-                padding: 2rem 0;
-            }
-
-            .social-links {
+            .footer-links {
                 flex-direction: column;
                 gap: 1rem;
-                align-items: center;
             }
         }
 
@@ -507,7 +507,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Loading animation */
+        /* Animation */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -523,332 +523,248 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Daria Locher</h1>
-                <p class="subtitle">Data Researcher & Advocacy Specialist</p>
-                <p class="description">Self-motivated researcher with a passion for quantitative social science and data-driven advocacy</p>
-                <p class="description">Westchester County, NY • darlocher [at] gmail [dot] com</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Daria Locher</h1>
+            <p class="subtitle">Data Researcher & Advocacy Specialist</p>
+            <p class="description">
+                Self-motivated researcher with a passion for quantitative social science and data-driven advocacy
+            </p>
+            <div class="header-meta">
+                <div class="header-meta-item">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>Westchester County, NY</span>
+                </div>
+                <div class="header-meta-item">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>darlocher@gmail.com</span>
+                </div>
             </div>
         </div>
-        
     </header>
-    
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="https://darlocher.wixsite.com/website/blog">Independent Research</a></li>
-                <li><a href="https://darlocher.wixsite.com/website/graphic-and-data-portfolio">Graphic & Data Portfolio</a></li>
-                <Button variant="outline" className="bg-white text-blue-600 border-blue-200 hover:bg-blue-50">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Portfolio
-                </Button>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li>
+                    <a href="#" class="portfolio-btn">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                        Portfolio
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    
-    <div class="main-content">
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Daria</h2>
-                <div class="about-content">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p><strong>Location:</strong> Westchester County, New York</p>
-                        <p><strong>Email:</strong> darlocher [at] gmail [dot] com</p>
-                        <p><strong>LinkedIn:</strong> <a href="https://darlocher.wixsite.com/website/graphic-and-data-portfolio">linkedin.com/in/daria-locher</a></p>
+    <!-- Main Content -->
+    <main class="main">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">About</h2>
+            <div class="about-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="about-text">
+                            <p>
+                                From interviewing journalists assaulted by police to writing a submission to the UN Working Group
+                                on Arbitrary Detention, I combine digital fluency, creative storytelling, and rigorous research to
+                                create impactful campaigns and drive change.
+                            </p>
+                            <p>
+                                My work spans multiple domains including human rights advocacy, election research, data
+                                visualization, and political analysis. I have extensive experience working with organizations such
+                                as the Committee to Protect Journalists, PEN America, Rock the Vote, and the Associated Press.
+                            </p>
+                            <p>
+                                I am passionate about using data-driven approaches to promote democracy, free expression, and
+                                human rights globally. My background includes both quantitative research methods and hands-on
+                                advocacy work across multiple countries and cultures.
+                            </p>
+                        </div>
                     </div>
-                    <div class="about-text">
-                        <p>From interviewing journalists assaulted by police to writing a submission to the UN Working Group on Arbitrary Detention, I combine digital fluency, creative storytelling, and rigorous research to create impactful campaigns and drive change.</p>
-                        <p>My work spans multiple domains including human rights advocacy, election research, data visualization, and political analysis. I have extensive experience working with organizations such as the Committee to Protect Journalists, PEN America, Rock the Vote, and the Associated Press.</p>
-                        <p>I am passionate about using data-driven approaches to promote democracy, free expression, and human rights globally. My background includes both quantitative research methods and hands-on advocacy work across multiple countries and cultures.</p>
+                </div>
+                <div class="card quick-links">
+                    <div class="card-content">
+                        <h3>Quick Links</h3>
+                        <a href="https://darlocher.wixsite.com/website/blog" class="link-btn">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                            Independent Research
+                        </a>
+                        <a href="https://darlocher.wixsite.com/website/graphic-and-data-portfolio" class="link-btn">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                            Data Portfolio
+                        </a>
+                        <a href="https://linkedin.com/in/daria-locher" class="link-btn">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                            LinkedIn Profile
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <section id="experience">
-            <div class="container">
-                <h2 class="section-title">Work Experience</h2>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Marketing and Research Associate</div>
-                            <div class="job-company">Split Aces Consulting</div>
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="card experience-item">
+                <button class="experience-header" onclick="toggleExperience(0)">
+                    <div class="experience-header-content">
+                        <div class="experience-info">
+                            <div class="experience-title">Marketing and Research Associate</div>
+                            <div class="experience-company">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                                Split Aces Consulting
+                            </div>
+                            <div class="experience-date">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                Dec 2023 - Present
+                            </div>
                         </div>
-                        <div class="job-meta">
-                            <div class="job-date">Dec 2023 - Present</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
+                        <svg class="expand-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
                     </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Conduct marketing research, copywriting, landscape analysis, and social media strategy design</li>
-                            <li>Design slide decks to communicate research to clients</li>
-                            <li>Clients include Oceana, American Psychological Foundation, National Center for Appropriate Technology (NCAT), and Stateless Fashion Design & Consulting</li>
-                        </ul>
-                    </div>
+                </button>
+                <div class="experience-description">
+                    <ul class="experience-list">
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Conduct marketing research, copywriting, landscape analysis, and social media strategy design</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Design slide decks to communicate research to clients</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Clients include Oceana, American Psychological Foundation, National Center for Appropriate Technology (NCAT), and Stateless Fashion Design & Consulting</span>
+                        </li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Elections Researcher</div>
-                            <div class="job-company">BallotReady</div>
+            <div class="card experience-item">
+                <button class="experience-header" onclick="toggleExperience(1)">
+                    <div class="experience-header-content">
+                        <div class="experience-info">
+                            <div class="experience-title">Elections Researcher</div>
+                            <div class="experience-company">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                                BallotReady
+                            </div>
+                            <div class="experience-date">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                Sep 2024 - Present
+                            </div>
                         </div>
-                        <div class="job-meta">
-                            <div class="job-date">Sep 2024 - Present</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
+                        <svg class="expand-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
                     </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Conduct online research to develop comprehensive, statewide voting guides</li>
-                            <li>Research accessibility of early and absentee voting mechanisms & Contact local board of elections to confirm and validate research.</li>
-                            <li>Analyze county- and municipal-level election logistics and officeholder information</li>
-                        </ul>
-                    </div>
+                </button>
+                <div class="experience-description">
+                    <ul class="experience-list">
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Conduct online research to develop comprehensive, statewide voting guides</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Research accessibility of early and absentee voting mechanisms & Contact local board of elections to confirm and validate research</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Analyze county- and municipal-level election logistics and officeholder information</span>
+                        </li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Expected Vote Election Night Analyst</div>
-                            <div class="job-company">Associated Press, Expected Vote</div>
+            <div class="card experience-item">
+                <button class="experience-header" onclick="toggleExperience(2)">
+                    <div class="experience-header-content">
+                        <div class="experience-info">
+                            <div class="experience-title">Audience Engagement Associate</div>
+                            <div class="experience-company">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                                Committee to Protect Journalists
+                            </div>
+                            <div class="experience-date">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                Jul 2022 - May 2024
+                            </div>
                         </div>
-                        <div class="job-meta">
-                            <div class="job-date">Aug 2024 - Nov 2024</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
+                        <svg class="expand-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
                     </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Monitor and adjust turnout predictions during vote tabulation for primary and general election nights using statistical modeling</li>
-                            <li>Analyzed regression models for Connecticut and New York and adjusted external datasets based on real-time fluctuations</li>
-                            <li>Provided critical data used by media organizations nationwide</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Audience Engagement Associate</div>
-                            <div class="job-company">Committee to Protect Journalists</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">Jul 2022 - May 2024</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Day-to-day execution, outreach, and response on CPJ's global social channels reaching nearly one million users</li>
-                            <li>Created data visualizations for 11 reports and designed dozens of social campaigns</li>
-                            <li>Developed click-to-tweet content for jailed journalist Evan Gershkovich that reached 500k users</li>
-                            <li>Collaborated with video producer on 100+ videos and tracked analytics to define future strategies</li>
-                            <li>Drove a 1000% increase in web traffic from YouTube, LinkedIn, and Instagram through digital campaigns</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Writers At Risk Project Intern</div>
-                            <div class="job-company">PEN America</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">Sep 2021 - Jul 2022</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Conducted targeted media monitoring on free-expression stories and updated case research on writers at risk</li>
-                            <li>Drafted press releases and social media copy; contributed research and fact-checking to reports</li>
-                            <li>Contributed to the 2021 and 2022 Freedom to Write Index reports</li>
-                            <li>Wrote submissions to UN Working Group on Arbitrary Detention on behalf of Iranian writers</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Creative Coordinator</div>
-                            <div class="job-company">International Free Expression Project</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">Feb 2021 - Jul 2022</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Managed website, social media, and digital projects for the organization</li>
-                            <li>Developed internal processes and new initiatives; handled logistics for public and private events</li>
-                            <li>Represented the organization at the 2022 Four Freedoms Award Ceremony</li>
-                            <li>Designed the May 2021 physical art exhibit "Faces of Free Expression"</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Intern</div>
-                            <div class="job-company">Rock the Vote</div>
-                        </div>
-                         <div class="job-meta">
-                            <div class="job-date">Sep 2020 - Apr 2021</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Data collection and verification of local election information across multiple databases</li>
-                            <li>Compiled political endorsements for a tool used by nearly 100,000 voters in 2020</li>
-                            <li>Wrote explainer articles about elections and created video, graphic, and written social media content</li>
-                            <li>Responded to external text and email queries from voters</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Contributing Reporter</div>
-                            <div class="job-company">U.S. Press Freedom Tracker</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">Sep 2020 - Dec 2020</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Researched, conducted interviews, and catalogued press freedom violations in the U.S.</li>
-                            <li>Documented attacks on journalists during 2020 George Floyd and election protests</li>
-                            <li>Conducted open-source investigations and alternative media research</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Journalism Intern</div>
-                            <div class="job-company">The Borgen Project</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">June 2021 - Jan 2022</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Wrote weekly online articles about global poverty alleviation, innovations, and news</li>
-                            <li>Called my representatives in Congress weekly in support of global poverty alleviation legislation</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Educational Consultant; Head of Social Media</div>
-                            <div class="job-company">Hermiona Education</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">2019 - 2020</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Designed and executed lesson plans with 10- to 17-year- olds on standardized tests including the SAT and SSAT</li>
-                            <li>Ran multiple advertising campaigns; scheduled, executed, delegated updates on Facebook, Instagram, website through Wix; created social media graphic designs.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Assistant Instructor</div>
-                            <div class="job-company">Washington University in St. Louis</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">Aug 2019 - Dec 2019</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>For the course Quantitative Political Methodology, required for the Political Science major at my university</li>
-                            <li>Taught students to use R to analyze large datasets, focusing on the American Panel Survey (TAPS) dataset</li>
-                            <li>Hosted a weekly two-hour study hall and graded exams and problem sets</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Research Assistantships</div>
-                            <div class="job-company">Washington University in St. Louis</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">Aug 2017 - Jan 2019</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Digital Humanities Research Assistantship (2017 - 2018): I read, indexed, and analyzed 18th century French handwritten masonic ritual texts for performance theorist Pannill Camp.</li>
-                            <li>Political Science Research Assistantship (2018 - 2019): I complied an Excel dataset of top US mayors' demography, social media, and electoral success for political scientist Betsy Sinclair. Find the final, published work here.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Freelance Consulting Work</div>
-                            <div class="job-company">Various Organizations</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-date">Jan 2019 - Present</div>
-                            <div class="expand-icon">▶</div>
-                        </div>
-                    </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Book editing for independent author (2024–Present): Developmental edit, line edit, copy edit, and proofread a 150-page book on art education by Ruby Decker, elementary school teacher and mentor teacher</li>
-                            <li>Videography for Nelstudios wedding photographer (2023-Present): Capture videography and audio, and perform video editing. In April 2024, conducted a digital marketing analysis of social media strategy and competitors</li>
-                            <li>Podcast Production Assistant at R&R Labs (2019): Supported the production team with guest outreach and interview scheduling and writing research briefs on future guests</li>
-                            <li>Translation services for independent author (2019): Working on a film for the screenwriter Natalya Knyazkina (Наталя Князькина) entitled "The Price of Impossible" (Цена невозможного), I translated 16 pages from Russian to English while maintaining the idiomatic and emotional integrity of the original content</li>
-                            <li>Speaker at American Center in Moscow (2019): Designed and presented 90-minute-long weekly presentations and discussions on media literacy to inspire critical news consumption and facilitate cross-cultural dialog. Prepared resource materials, responded to questions, and taught participants how to evaluate media by themselves</li>
-                        </ul>
-                    </div>
+                </button>
+                <div class="experience-description">
+                    <ul class="experience-list">
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Day-to-day execution, outreach, and response on CPJ's global social channels reaching nearly one million users</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Created data visualizations for 11 reports and designed dozens of social campaigns</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Developed click-to-tweet content for jailed journalist Evan Gershkovich that reached 500k users</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Collaborated with video producer on 100+ videos and tracked analytics to define future strategies</span>
+                        </li>
+                        <li>
+                            <div class="bullet"></div>
+                            <span>Drove a 1000% increase in web traffic from YouTube, LinkedIn, and Instagram through digital campaigns</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-title">Technical Proficiencies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Technical Proficiencies</h2>
+            <div class="skills-grid">
+                <div class="card">
+                    <div class="card-content">
                         <h3>Data Analysis & Programming</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
@@ -859,7 +775,9 @@
                             <span class="skill-tag">GIS</span>
                         </div>
                     </div>
-                    <div class="skill-category">
+                </div>
+                <div class="card">
+                    <div class="card-content">
                         <h3>Data Visualization</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Adobe Creative Cloud</span>
@@ -870,7 +788,9 @@
                             <span class="skill-tag">Looker Studio</span>
                         </div>
                     </div>
-                    <div class="skill-category">
+                </div>
+                <div class="card">
+                    <div class="card-content">
                         <h3>Digital Marketing</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Hootsuite</span>
@@ -881,7 +801,9 @@
                             <span class="skill-tag">Content Creation</span>
                         </div>
                     </div>
-                    <div class="skill-category">
+                </div>
+                <div class="card">
+                    <div class="card-content">
                         <h3>Languages</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">English (Native)</span>
@@ -891,225 +813,97 @@
                             <span class="skill-tag">Spanish (Basic)</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Organizational Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Google Workspace</span>
-                            <span class="skill-tag">Microsoft Suite</span>
-                            <span class="skill-tag">Asana</span>
-                            <span class="skill-tag">Slack</span>
-                            <span class="skill-tag">Neon CRM</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="publications">
-            <div class="container">
-                <h2 class="section-title">Selected Publications</h2>
-                <div class="publications-list">
-                    <div class="publication-item">
-                        <div class="publication-title">The Torch Weekly Newsletter</div>
-                        <div class="publication-venue">Committee to Protect Journalists</div>
-                        <div class="publication-date">July 2022 - March 2024</div>
-                    </div>
-                    
-                    <div class="publication-item">
-                        <div class="publication-title">"The Long Arm of Repression: Threats to Exiled Writers"</div>
-                        <div class="publication-venue">PEN America's Freedom to Write Index 2021</div>
-                        <div class="publication-date">April 2022</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">Submission to the United Nations Working Group on Arbitrary Detention</div>
-                        <div class="publication-venue">On behalf of Iranian writers Baktash Abtin, Reza Khandan Mahabadi, Keyvan Bajan, and Arash Ganji1</div>
-                        <div class="publication-date">Jan 2022</div>
-                    </div>
-
-
-                    <div class="publication-item">
-                        <div class="publication-title">Press release: Colombian Journalist Surveilled, Stalked by Her Government Security Detail Assigned to Protect Her</div>
-                        <div class="publication-venue">PEN America</div>
-                        <div class="publication-date">Oct 2021</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"Two Sacramento Bee journalists hit from behind, their equipment damaged and stolen, while covering protests"</div>
-                        <div class="publication-venue">U.S. Press Freedom Tracker</div>
-                        <div class="publication-date">September 2020</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"Des Moines Register reporter hit with pepper spray in face after repeatedly identifying as press"</div>
-                        <div class="publication-venue">U.S. Press Freedom Tracker</div>
-                        <div class="publication-date">2020</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"Russian freelance journalist arrested while covering protests in Brooklyn"</div>
-                        <div class="publication-venue">U.S. Press Freedom Tracker</div>
-                        <div class="publication-date">2020</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"Impeachment: An Explainer"</div>
-                        <div class="publication-venue">Rock the Vote Medium</div>
-                        <div class="publication-date">January 2021</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"The 25th Amendment: An Explainer"</div>
-                        <div class="publication-venue">Rock the Vote Medium</div>
-                        <div class="publication-date">January 2021</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"An Explainer: The 2020 Georgia Senate Runoff Elections"</div>
-                        <div class="publication-venue">Rock the Vote Medium</div>
-                        <div class="publication-date">December 2020</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">UN Working Group on Arbitrary Detention Submission</div>
-                        <div class="publication-venue">PEN America (on behalf of Iranian writers Baktash Abtin, Reza Khandan Mahabadi, Keyvan Bajan, and Arash Ganji)</div>
-                        <div class="publication-date">January 2022</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"Visionaries Changemaker: Zoe Titus"</div>
-                        <div class="publication-venue">International Free Expression Project blog</div>
-                        <div class="publication-date">February 2022</div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="publication-title">"The State of Artistic Freedom 2021: Report by Freemuse"</div>
-                        <div class="publication-venue">International Free Expression Project blog</div>
-                        <div class="publication-date">June 2021</div>
-                    </div>
-
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="publications-list">
+                <div class="card publication-item">
+                    <div class="publication-title">The Torch Weekly Newsletter</div>
+                    <div class="publication-venue">Committee to Protect Journalists</div>
+                    <div class="publication-date">July 2022 - March 2024</div>
+                </div>
+                <div class="card publication-item">
+                    <div class="publication-title">"The Long Arm of Repression: Threats to Exiled Writers"</div>
+                    <div class="publication-venue">PEN America's Freedom to Write Index 2021</div>
+                    <div class="publication-date">April 2022</div>
+                </div>
+                <div class="card publication-item">
+                    <div class="publication-title">Submission to the United Nations Working Group on Arbitrary Detention</div>
+                    <div class="publication-venue">On behalf of Iranian writers</div>
+                    <div class="publication-date">Jan 2022</div>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Ongoing Data Science Coursework</div>
-                            <div class="job-company">Various Institutions</div>
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="card education-item">
+                <div class="card-content">
+                    <div class="education-header">
+                        <div>
+                            <div class="education-title">B.A. in International and Area Studies & Political Science</div>
+                            <div class="education-school">Washington University in St. Louis</div>
                         </div>
-                    <div class="job-meta">
-                        <div class="job-date">2024 - Present</div>
-                        <div class="expand-icon">▶</div>
+                        <div class="education-badge">Class of 2020</div>
+                    </div>
+                    <div class="education-details">
+                        <p>• Graduated cum laude with a concentration in Global Cultural Studies and Russia</p>
+                        <p>• GPA: 3.70, Dean's List recipient</p>
+                        <p>• Outstanding Honors Thesis Award (2020)</p>
+                        <p>• Teaching Assistant for Quantitative Political Methodology</p>
                     </div>
                 </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Single Variable Calculus - Coursera (In Progress)</li>
-                            <li>IBM Data Science Professional Certificate - Coursera (In Progress)</li>
-                            <li>Computing for Data Analysis - Georgia Institute of Technology (Spring 2025)</li>
-                            <li>Linear Algebra - Georgia Institute of Technology (Fall-Spring 2024)</li>
-                            <li>Introduction to Python - NYU School of Professional Studies (Fall 2024)</li>
-                        </ul>
-                    </div>
-                </div>
+            </div>
 
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">B.A. in International and Area Studies & Political Science</div>
-                            <div class="job-company">Washington University in St. Louis</div>
+            <div class="card education-item">
+                <div class="card-content">
+                    <div class="education-header">
+                        <div>
+                            <div class="education-title">Ongoing Data Science Coursework</div>
+                            <div class="education-school">Various Institutions</div>
                         </div>
-                    <div class="job-meta">
-                        <div class="job-date">Class of 2020</div>
-                        <div class="expand-icon">▶</div>
+                        <div class="education-badge" style="background: #dbeafe; color: #1e40af; border-color: #bfdbfe;">2024 - Present</div>
                     </div>
-                </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Graduated cum laude with a concentration in Global Cultural Studies and Russia</li>
-                            <li>GPA: 3.70, Dean's List recipient</li>
-                            <li>Outstanding Honors Thesis Award (2020) for "Winged out of Woe from Wit: The Entrance of Literary Phrases into Russia's Oral History"</li>
-                            <li>Coursework included quantitative political methodology, computational statistics, data visualization, GIS mapping, counterterrorism, civil war and peace, public opinion and American democracy</li>
-                            <li>Teaching Assistant for Quantitative Political Methodology</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Semester Abroad in Moscow, Russia</div>
-                            <div class="job-company">National Research University Higher School of Economics</div>
-                        </div>
-                    <div class="job-meta">
-                        <div class="job-date">Jan 2019 - May 2019</div>
-                        <div class="expand-icon">▶</div>
-                    </div>
-                </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Semester living with host family with Russian language pledge</li>
-                            <li>Coursework in Journalism, Russian History, Russian Literature and Russian Politics</li>
-                            <li>Project member at HSE's Political Anticorruption Planning-Educational Lab</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-info">
-                            <div class="job-title">Intensive Russian Language Program</div>
-                            <div class="job-company">Middlebury College – Davis School of Russian</div>
-                        </div>
-                    <div class="job-meta">
-                        <div class="job-date">May 2018 - Aug 2018</div>
-                        <div class="expand-icon">▶</div>
-                    </div>
-                </div>
-                    <div class="job-description">
-                        <ul>
-                            <li>Eight-week intensive summer program with language pledge</li>
-                            <li>Final grade: A-</li>
-                            <li>Russian theater and literature clubs participation</li>
-                        </ul>
+                    <div class="education-details">
+                        <p>• IBM Data Science Professional Certificate - Coursera (In Progress)</p>
+                        <p>• Introduction to Python - NYU School of Professional Studies</p>
+                        <p>• Linear Algebra - Georgia Institute of Technology</p>
+                        <p>• Computing for Data Analysis - Georgia Institute of Technology (Spring 2025)</p>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Daria Locher. All rights reserved.</p>
-            <p>Get in touch! I'm always interested in discussing new opportunities in data research, human rights advocacy, and social impact projects.</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/daria-locher">LinkedIn</a>
-                <a href="mailto:darlocher@gmail.com">Email</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Daria Locher. All rights reserved.</p>
+            <p class="description">
+                Get in touch! I'm always interested in discussing new opportunities in data research, human rights
+                advocacy, and social impact projects.
+            </p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/daria-locher" class="footer-btn">LinkedIn</a>
+                <a href="mailto:darlocher@gmail.com" class="footer-btn">Email</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Collapsible experience items
-        document.querySelectorAll('.job-header').forEach(header => {
-            header.addEventListener('click', function() {
-                const experienceItem = this.parentElement;
-                const icon = this.querySelector('.expand-icon');
-                
-                experienceItem.classList.toggle('expanded');
-                
-                if (experienceItem.classList.contains('expanded')) {
-                    icon.style.transform = 'rotate(90deg)';
-                } else {
-                    icon.style.transform = 'rotate(0deg)';
-                }
-            });
-        });
+        // Experience toggle functionality
+        function toggleExperience(index) {
+            const experienceItems = document.querySelectorAll('.experience-item');
+            const item = experienceItems[index];
+            
+            item.classList.toggle('expanded');
+        }
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1125,28 +919,6 @@
             });
         });
 
-        // Add active class to navigation items on scroll
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
         // Add fade-in animation on scroll
         const observerOptions = {
             threshold: 0.1,
@@ -1156,14 +928,37 @@
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.1s';
                     entry.target.classList.add('fade-in');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.experience-item, .skill-category, .publication-item').forEach(el => {
+        // Observe elements for animation
+        document.querySelectorAll('.card, .section').forEach(el => {
             observer.observe(el);
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '#374151';
+                link.style.background = 'transparent';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = '#2563eb';
+                    link.style.background = '#eff6ff';
+                }
+            });
         });
     </script>
 </body>
