@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,10 +57,10 @@
             line-height: 1.7;
         }
 
-        .header-meta {
+        /* .header-meta {
             display: flex;
             align-items: center;
-            justify-content: left;
+            justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
@@ -75,7 +76,7 @@
         .icon {
             width: 1rem;
             height: 1rem;
-        }
+        } */
 
         /* Navigation */
         .nav {
@@ -88,15 +89,14 @@
             max-height: 80px;
         }
 
-        .nav-content {
+        /* .nav-content {
             max-width: 1200px;
-            /* margin: 0 auto; */
-            /* padding: 0 1.5rem; */
-        }
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        } */
 
         .nav-list {
             display: flex;
-            /* align-items: center; */
             justify-content: center;
             gap: 2rem;
             padding: 1rem 0;
@@ -104,19 +104,19 @@
             flex-wrap: wrap;
         }
 
-        .nav-link {
+        /* .nav-link {
             text-decoration: none;
             color: #374151;
             font-weight: 500;
             padding: 0.5rem 0.75rem;
             border-radius: 0.5rem;
             transition: all 0.2s;
-        }
+        } */
 
-        .nav-link:hover {
+        /* .nav-link:hover {
             color: #2563eb;
             background: #eff6ff;
-        }
+        } */
 
         .nav-item {
             position: relative;
@@ -155,14 +155,14 @@
             top: 100%;
             left: 50%;
             transform: translateX(-50%) translateY(-10px);
-            
+
             background-color: white;
             min-width: 200px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             border: 1px solid #e5e7eb;
             border-radius: 0.375rem;
             z-index: 1000;
-            
+
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -172,7 +172,7 @@
         .nav-item:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
-            pointer-events: auto; 
+            pointer-events: auto;
             transform: translateX(-50%) translateY(0);
         }
 
@@ -238,6 +238,7 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: all 0.3s;
+            margin-bottom: 2rem;
         }
 
         .card:hover {
@@ -246,109 +247,134 @@
 
         .card-content {
             padding: 2rem;
+            text-align: center;
         }
 
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .about-text {
+        .card-content p {
             font-size: 1rem;
             color: #374151;
             line-height: 1.7;
-        }
-
-        .about-text p {
             margin-bottom: 1.5rem;
         }
 
-        .quick-links {
-            background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+        /* Grids Formatting */
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            /* align-items: start; */
+            margin-top: 1.5rem;
         }
 
-        .quick-links h3 {
+        .portfolio-item {
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        h2 {
+            color: #000;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #000;
+            margin-bottom: 10px;
+            text-justify: left;
+        } 
+
+        /* .portfolio-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-category h3 {
             font-size: 1.125rem;
             font-weight: 600;
             color: #111827;
             margin-bottom: 1rem;
+        } */
+
+        /* Single Image Layout Style */
+        .single-image {
+            text-align: center;
+            margin-top: 1.5rem;
         }
 
-        .link-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background: white;
-            color: #374151;
-            border: 1px solid #d1d5db;
+        .single-image img {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain;
             border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 0.75rem;
-            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .link-btn:hover {
-            background: #f9fafb;
+        /* Iframe Style */
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 1rem;
-        }
-
-        .experience-header {
+        /* .portfolio-header {
             width: 100%;
             padding: 1.5rem;
             background: none;
             border: none;
-            text-align: left;
+            text-align: center;
             cursor: pointer;
             transition: background-color 0.2s;
         }
 
-        .experience-header:hover {
+        .portfolio-header:hover {
             background: #f9fafb;
         }
 
-        .experience-header-content {
+        .portfolio-header-content {
             display: flex;
             align-items: center;
             justify-content: between;
             width: 100%;
         }
 
-        .experience-info {
+        .portfolio-info {
             flex: 1;
         }
 
-        .experience-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-company {
+        .portfolio-company {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             color: #2563eb;
             font-weight: 500;
             margin-bottom: 0.5rem;
-        }
-
-        .experience-date {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #6b7280;
-            font-size: 0.875rem;
         }
 
         .expand-icon {
@@ -359,11 +385,11 @@
             transition: transform 0.3s;
         }
 
-        .experience-item.expanded .expand-icon {
+        .portfolio-item.expanded .expand-icon {
             transform: rotate(90deg);
         }
 
-        .experience-description {
+        .portfolio-dropdown {
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
@@ -371,143 +397,10 @@
             border-top: 1px solid #e5e7eb;
         }
 
-        .experience-item.expanded .experience-description {
+        .portfolio-item.expanded .portfolio-dropdown {
             max-height: 500px;
             padding: 1.5rem;
-        }
-
-        .experience-list {
-            list-style: none;
-        }
-
-        .experience-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            color: #374151;
-            font-size: 0.875rem;
-            line-height: 1.6;
-        }
-
-        .bullet {
-            width: 0.375rem;
-            height: 0.375rem;
-            background: #2563eb;
-            border-radius: 50%;
-            margin-top: 0.5rem;
-            flex-shrink: 0;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-category h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 1rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        /* Publications Section */
-        .publications-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .publication-item {
-            border-left: 4px solid #2563eb;
-            padding: 1.5rem;
-        }
-
-        .publication-title a,
-        a.publication-title {
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.2s ease;
-            color: #111827;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-title a:hover,
-        a.publication-title:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
-
-        .publication-venue {
-            color: #2563eb;
-            font-weight: 500;
-            margin-bottom: 0.25rem;
-        }
-
-        .publication-date {
-            color: #6b7280;
-            font-size: 0.875rem;
-        }
-
-        /* Education Section */
-        .education-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .education-header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-
-        .education-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 0.25rem;
-        }
-
-        .education-school {
-            color: #2563eb;
-            font-weight: 500;
-        }
-
-        .education-badge {
-            background: #dcfce7;
-            color: #166534;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid #bbf7d0;
-        }
-
-        .education-details {
-            color: #374151;
-            line-height: 1.6;
-        }
-
-        .education-details p {
-            margin-bottom: 0.5rem;
-        }
+        } */
 
         /* Footer */
         .footer {
@@ -560,7 +453,11 @@
                 font-size: 2rem;
             }
 
-            .about-grid {
+            .main {
+                padding: 2rem 1rem;
+            }
+            
+            .portfolio-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -582,25 +479,29 @@
                 background-color: #f9fafb;
                 margin-top: 0;
             }
-
-            .experience-header-content {
+/* 
+            .portfolio-header-content {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;
             }
 
-            .skills-grid {
+            .portfolio-grid {
                 grid-template-columns: 1fr;
             }
 
-            .education-header {
+            .portfolio-header {
                 flex-direction: column;
                 gap: 0.5rem;
-            }
+            } */
 
             .footer-links {
                 flex-direction: column;
                 gap: 1rem;
+            }
+
+            iframe {
+                height: 250px;
             }
         }
 
@@ -624,6 +525,7 @@
         } */
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -644,42 +546,292 @@
                     <a href="/" class="dropdown-toggle">
                         Resume
                         <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                         <div class="dropdown-menu">
-                            <a href="#experience" class="dropdown-item">Experience</a>
-                            <a href="#skills" class="dropdown-item">Skills</a>
-                            <a href="#publications" class="dropdown-item">Publications</a>
-                            <a href="#education" class="dropdown-item">Education</a>
+                            <a href="/#experience" class="dropdown-item">Experience</a>
+                            <a href="/#skills" class="dropdown-item">Skills</a>
+                            <a href="/#publications" class="dropdown-item">Publications</a>
+                            <a href="/#education" class="dropdown-item">Education</a>
                         </div>
-                    </li>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="dropdown-toggle">
                         Portfolio and Research
                         <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                         <div class="dropdown-menu">
                             <a href="/portfolio" class="dropdown-item">Data Portfolio</a>
                             <a href="/research" class="dropdown-item">Independent Research</a>
                         </div>
-                    </li>
-                    <!-- <li class="nav-item">
+                </li>
+                <!-- <li class="nav-item">
                         <a href="#" class="portfolio-btn">
                         <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                         </svg>
                         Portfolio
                     </li> -->
-                    </a>
+                </a>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
     <main>
-        <h1>About Me</h1>
-        <p>Your about content here...</p>
+        <h2 class="section-title">Graphic Design & Data Visualization Portfolio</h2>
+        <section id="graphic-design" class="section">
+            <h3 class="section-title">Graphic Design</h3>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Journalist safety graphics for sharing on social media</p>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_1338449734f549f584d5b6f60c0d904e~mv2.jpg/v1/fill/w_604,h_604,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/29cdad_1338449734f549f584d5b6f60c0d904e~mv2.jpg"
+                                alt="CPJ Protest Safety - 2 device security">
+                            <p>Digital Graphic: CPJ's Protest Safety toolkit, Device Security page, 2023</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_55a468aafa814d6483595d46e128ad03~mv2.jpg/v1/fill/w_604,h_604,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/29cdad_55a468aafa814d6483595d46e128ad03~mv2.jpg"
+                                alt="CPJ Protest Safety - 8 CPJ info">
+                            <p>Digital Graphic: CPJ's Protest Safety toolkit, Contact information page, 2023</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_0c027c4277c14944a465ddb330fb82ca~mv2.jpg/v1/fill/w_604,h_604,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/29cdad_0c027c4277c14944a465ddb330fb82ca~mv2.jpg"
+                                alt="CPJ Protest Safety - CPJ WhatsApp Chatbot">
+                            <p>Digital and Print Graphic: CPJ's WhatsApp Safety Chatbot, 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Social media graphics for explaining breaking news in free expression</p>
+                    
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_3d7880cf390e4da6a2b4c0ca15e8369f~mv2.jpg/v1/fill/w_302,h_302,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/427971906_777048097785364_3118204871611744835_n.jpg"
+                                alt="Social Media Graphic 1">
+                            <p>Social Media Graphic for CPJ's report "Israel-Gaza war brings 2023 journalist killings to
+                                devastating high", 2024</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_2381d0c0262145258a7e9d4cfbad6c3e~mv2.png/v1/fill/w_299,h_302,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-03%20at%201_20_08%E2%80%AFPM.png"
+                                alt="Social Media Graphic 2">
+                            <p>Social Media Graphic for CPJ's feature "Q&A: Journalist Shrouq Al Aila on what cameras
+                                can't show about the war in Gaza", 2024</p>
+
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_5551fde762bb45a58b898ab46adbbd31~mv2.png/v1/fill/w_301,h_302,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-03%20at%201_16_53%E2%80%AFPM.png"
+                                alt="Social Media Graphic 3">
+                            <p>Virtual Exhibit: Faces of Free Expression for IFEP, 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Advocacy campaign messaging graphics for external partners to share</p>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_435ce5c87341466ba9e1aec1d9b2d089~mv2.png/v1/fill/w_302,h_301,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-03%20at%201_19_45%E2%80%AFPM.png"
+                                alt="Advocacy Graphic 1">
+                            <p>Social Media Graphic: primary graphic for CPJ's PRESS Act advocacy, 2024</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_05253457688242c6adea16b4bb5f7eeb~mv2.jpg/v1/fill/w_301,h_302,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/411210634_742036961286478_3447998435340258624_n.jpg"
+                                alt="Advocacy Graphic 2">
+                            <p>Digital and Print Graphic: primary graphic for CPJ's World Press Freedom Day campaign, 2024</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <img src="https://static.wixstatic.com/media/29cdad_12686611aa0e42a7a6e86d224e647797~mv2.jpg/v1/fill/w_302,h_302,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Missing%20Not%20Forgotten%20CPJ%20-%20square.jpg"
+                                alt="Advocacy Graphic 3">
+                            <p>Digital Graphic: primary graphic for CPJ's Missing Not Forgotten web campaign, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Web flyer: primary web banner and flyer for the Committee to Protect Journalists' annual fundraising gala, the International Press
+                        Freedom Awards, 2024</p>
+                    <div class="single-image">
+                        <img src="https://static.wixstatic.com/media/29cdad_c4141655c45d475999f5f8e3cd5a7fdf~mv2.png/v1/fill/w_581,h_275,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-03%20at%201_22_40%E2%80%AFPM.png"
+                        alt="International Press Freedom Awards Flyer">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Motion graphics for the Committee to Protect Journalists' social media feeds</p>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <iframe src="https://darlocher-wixsite-com.filesusr.com/html/29cdad_1b0bf4a35811846752d29d6f5a67a4f3.html"
+                                frameborder="0" scrolling="no" allowfullscreen></iframe>
+                            <p>Social Media Motion Graphic for CPJ's #FreeThePress campaign for World Press Freedom Day, 2024</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <iframe src="https://darlocher-wixsite-com.filesusr.com/html/29cdad_138f1d4b2ae133d5e1d981894a73c75e.html"
+                                frameborder="0" allowfullscreen></iframe>
+                            <p>Social Media Motion Graphic for CPJ for World Press Freedom Day, 2024</p>
+                        </div>
+                        <div class="portfolio-item">
+                            <iframe src="https://darlocher-wixsite-com.filesusr.com/html/29cdad_baadb57b3d1b4d38b2fd6599b03b2608.html"
+                                frameborder="0" allowfullscreen></iframe>
+                            <p>Social Media Motion Graphic for CPJ for World Press Freedom Day, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-visualization">
+            <h2 class="section-title">Data Visualization</h2>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Social Media Summary Infographic for the Committee to Protect Journalists' <a
+                            href="https://cpj.org/reports/2024/01/2023-prison-census-jailed-journalist-numbers-near-record-high-israel-imprisonments-spike/"
+                            target="_blank" rel="noopener noreferrer">2023 prison census</a></p>
+                    <div class="single-image">
+                        <img src="https://static.wixstatic.com/media/29cdad_2e985216ee7740cb8ae419788995824a~mv2.jpg/v1/fill/w_533,h_302,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/GEjO5ofXAAAAiu8.jpg"
+                        alt="2023 Prison Census Infographic">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Digital Summary infographic for the Committee to Protect Journalists' <a
+                            href="https://cpj.org/reports/2022/11/killing-with-impunity-vast-majority-of-journalists-murderers-go-free/"
+                            target="_blank" rel="noopener noreferrer">2022 impunity index</a></p>
+                    <img src="https://static.wixstatic.com/media/29cdad_aa9e043df50d44fdbaa48ead51338dc7~mv2.jpeg/v1/fill/w_302,h_579,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/impunity-infographic.jpeg"
+                        alt="2022 Impunity Index Infographic">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Interactive Data Visualization: graphic of Pew Research data from the 2014 Religious Landscape Survey for
+                        <a
+                            href="https://darlocher.wixsite.com/website/post/modern-magic-makers-a-look-into-the-neo-pagan-movement-in-the-u-s">my
+                            independent research</a></p>
+                    <div class="single-image">
+                        <div class="flourish-embed flourish-scatter" data-src="visualisation/18901628">
+                            <script src="https://public.flourish.studio/resources/embed.js">
+                            </script>
+                            <noscript>
+                                <img src="https://public.flourish.studio/visualisation/18901628/thumbnail" width="100%" alt="scatter visualization" />
+                            </noscript>
+                        </div>
+                        <!-- <iframe 
+                            src="https://darlocher-wixsite-com.filesusr.com/html/29cdad_f3b54e0562383f9073e9e96f0c04c780.html"
+                            title="Data visualization of Pew Research's Religious Landscape Study, with a focus on the Neo-Pagan religion"
+                            frameborder="0" allowfullscreen>
+                        </iframe> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p>Report Design: data visualizations of Zika virus case data for independent research — find the  <a
+                            href="https://darlocher.wixsite.com/website/post/zika-a-disease-of-the-poor">interactive data visualizations here</a></p>
+
+                    <div class="portfolio-grid">
+                        <div class="single-image">
+                            <img src="https://static.wixstatic.com/media/29cdad_cc91c338e68c440ab01bd7a31e6ccc7e~mv2.jpg"
+                                alt="Daria Locher Zika report - Page 1">
+                        </div>
+                        <div class="single-image">
+                            <img src="https://static.wixstatic.com/media/29cdad_28e3b21155934e9c9a83a484c1096700~mv2.jpg"
+                                alt="Daria Locher Zika report - Page 2">
+                        </div>
+                        <div class="single-image">
+                            <img src="https://static.wixstatic.com/media/29cdad_e8b77987fc2548529e4b4615a9560317~mv2.jpg"
+                                alt="Daria Locher Zika report - Page 3">
+                        </div>
+                        <div class="single-image">
+                            <img src="https://static.wixstatic.com/media/29cdad_09ac3f1503134721b7cb0002f5b07bc6~mv2.jpg"
+                                alt="Daria Locher Zika report - Page 4">
+                        </div>
+                        <div class="single-image">
+                            <img src="https://static.wixstatic.com/media/29cdad_4c1d1f9a44274d2b915740b84860d143~mv2.jpg"
+                                alt="Daria Locher Zika report - Page 5">
+                        </div>
+                        <div class="single-image">
+                            <img src="https://static.wixstatic.com/media/29cdad_9185485486b5438996df08bc5119f14a~mv2.jpg"
+                                alt="Daria Locher Zika report - Page 6">
+                        </div>
+                        <div class="single-image">
+                            <img src="https://static.wixstatic.com/media/29cdad_7d90f7660d59484485ae768c554d4a41~mv2.jpg"
+                                alt="Daria Locher Zika report - Page 6">
+                        </div>
+                    </div>
+                </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Daria Locher. All rights reserved.</p>
+            <p class="description">
+                Get in touch! I'm always interested in discussing new opportunities in data research, human rights
+                advocacy, and social impact projects.
+            </p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/daria-locher" class="footer-btn">LinkedIn</a>
+                <a href="mailto:darlocher@gmail.com" class="footer-btn">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // // Active navigation highlighting
+        // window.addEventListener('scroll', function () {
+        //     const sections = document.querySelectorAll('section');
+        //     const navLinks = document.querySelectorAll('.nav-link');
+
+        //     let current = '';
+        //     sections.forEach(section => {
+        //         const sectionTop = section.offsetTop - 100;
+        //         if (scrollY >= sectionTop - 200) {
+        //             current = section.getAttribute('id');
+        //         }
+        //     });
+
+        //     navLinks.forEach(link => {
+        //         link.style.color = '#374151';
+        //         link.style.background = 'transparent';
+        //         if (link.getAttribute('href') === '#' + current) {
+        //             link.style.color = '#2563eb';
+        //             link.style.background = '#eff6ff';
+        //         }
+        //     });
+        // });
+    </script>
 </body>
+
 </html>
